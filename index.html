@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <h2>Code Compiler</h2>
+
+        <select name="" id="lang">
+            <option value="java">Java</option>
+            <option value="py">Python</option>
+            <option value="cpp">C++</option>
+        </select>
+    </div>
+    <div class="container">
+        <div class="code">
+            <textarea name="" id="code" cols="30" rows="10" placeholder="Enter your code"></textarea>
+        </div>
+        <div class="output">
+            <div class="tool">
+                <button onclick="showoutput()">Check Output</button>
+            </div>
+            <div id="output" style="margin: 0.5em;">
+
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+        * {
+            font-family: Poppins;
+            outline: none;
+        }
+
+        html,
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            width: 100%;
+            padding: 0.5em;
+            display: flex;
+            height: 3em;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar * {
+            flex-grow: 1;
+        }
+
+        select {
+            width: 30%;
+            font-size: larger;
+            margin: 1em;
+            border: 2px solid black;
+            border-radius: 0.2em;
+            padding: 0.5em;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container div {
+            width: 100%;
+        }
+
+        .code {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 2px solid black;
+        }
+
+        .code textarea {
+            width: 98%;
+            border: 0;
+            font-size: medium;
+            resize: vertical;
+            max-height: 60vh;
+            min-height: 40vh;
+        }
+
+        h4 {
+            margin: 0.5em;
+        }
+
+        .tool{
+            display: flex;
+            margin: 0.5em;
+        }
+
+        .tool button{
+            background-color: rgb(60, 60, 255);
+            color :white;
+            border: none;
+            outline: none;
+            border-radius: 0.5em;
+            font-size: medium;
+            padding: 0.5em;
+            cursor: pointer;
+        }
+
+        .tool button:active{
+            transform: scale(0.99);
+        }
+
+        #output{
+            width: 99%;
+            height: 7em;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+    </style>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
